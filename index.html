@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-phase horizontal separator size calculator</title>
+    <script>"script.js"</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Two-phase horizontal separator size calculator    </h1>
+    <form id="calculator-form">
+        <label for="qg">Enter Qg - gas flow rate:</label>
+        <input type="number" id="qg" name="qg" >
+        <br><br>
+        <label for="qo">Enter Qo - oil flow rate:</label>
+        <input type="number" id="qo" name="qo" >
+        <br><br>
+        <label for="qw">Enter Qw - water flow rate:</label>
+        <input type="number" id="qw" name="qw" >
+        <br><br>
+        <label for="po">Enter Po - operating pressure:</label>
+        <input type="number" id="po" name="po" >
+        <br><br>
+        <label for="to">Enter To - operating temrepature:</label>
+        <input type="number" id="to" name="to" >
+        <br><br>
+        <label for="sg">Enter Sg - specific gravity:</label>
+        <input type="number" id="sg" name="sg" >
+        <br><br>
+        <label for="sgo">Enter SG o - specific gravity of oil:</label>
+        <input type="number" id="sgo" name="sgo" >
+        <br><br>
+        <label for="sgw">Enter SG w - specific gravity of water:</label>
+        <input type="number" id="sgw" name="sgw" >
+        <br><br>
+        <label for="dm">Enter dm - droplet size removal:</label>
+        <input type="number" id="dm" name="dm" >
+        <br><br>
+        <img src="1.png" />
+        <br><br>
+        <label for="z">Enter z - compressibility factor:</label>
+        <input type="number" id="z" name="z" >
+        <br><br>
+        <img src="2.png" />
+        <br><br>
+        <label for="m">Enter µ - viscosity:</label>
+        <input type="number" id="m" name="m" >
+        <br><br>
+        <label for="tr">Enter tr - retention time:</label>
+        <input type="number" id="tr" name="tr" >
+        <br><br>
+        <h1>CDi = 0.34</h1>
+        
+        <table id="results-table">
+            <thead>
+              <tr>
+                <th>d</th>
+                <th>Leff gas</th>
+                <th>Leff liquid</th>
+                <th>Lss</th>
+                <th>Sr</th>
+              </tr>
+              <tr>
+                <th>16</th>
+                <th id="leffg16"></th>
+                <th id="leffl16"></th>
+                <th id="lss16"></th>
+                <th id="sr16"></th>
+              </tr>
+              <tr>
+                <th>20</th>
+                <th id="leffg20"></th>
+                <th id="leffl20"></th>
+                <th id="lss20"></th>
+                <th id="sr20"></th>
+              </tr>
+              <tr>
+                <th>24</th>
+                <th id="leffg24"></th>
+                <th id="leffl24"></th>
+                <th id="lss24"></th>
+                <th id="sr24"></th>
+              </tr>
+              <tr>
+                <th>30</th>
+                <th id="leffg30"></th>
+                <th id="leffl30"></th>
+                <th id="lss30"></th>
+                <th id="sr30"></th>
+              </tr>
+              <tr>
+                <th>36</th>
+                <th id="leffg36"></th>
+                <th id="leffl36"></th>
+                <th id="lss36"></th>
+                <th id="sr36"></th>
+              </tr>
+              <tr>
+                <th>42</th>
+                <th id="leffg42"></th>
+                <th id="leffl42"></th>
+                <th id="lss42"></th>
+                <th id="sr42"></th>
+              </tr>
+              <tr>
+                <th>48</th>
+                <th id="leffg48"></th>
+                <th id="leffl48"></th>
+                <th id="lss48"></th>
+                <th id="sr48"></th>
+              </tr>
+              <tr>
+            </thead>
+          </table>
+
+        <button type="button" id="calculate-btn">Calculate</button>
+        <h1>It is recommended that you choose a diameter that corresponds to a Slenderness ratio value between 3 and 4.</h1>
+    </form>
+    <h2>Minimum diameter: <span id="result">0</span></h2>
+    <h2>Gas Capacity Constraint: <span id="resultg">0</span></h2>
+    <h2>Liquid Capacity Constraint: <span id="resultl">0</span></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
